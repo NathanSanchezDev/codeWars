@@ -82,17 +82,30 @@ class SmallestIntegerFinder {
     }
 }
 //testing code
-const chai = require("chai");
-const assert = chai.assert;
-chai.config.truncateThreshold=0;
+// const chai = require("chai");
+// const assert = chai.assert;
+// chai.config.truncateThreshold=0;
 
-describe("Smallest Integer Tests", () => {
-  let sif = new SmallestIntegerFinder();
-  it("Fixed Tests", () => {
-    assert.strictEqual(sif.findSmallestInt([78,56,232,12,8]),8,'Should return the smallest int 8');
-    assert.strictEqual(sif.findSmallestInt([78,56,232,12,18]),12,'Should return the smallest int 12');
-    assert.strictEqual(sif.findSmallestInt([78,56,232,412,228]),56,'Should return the smallest int 56');
-    assert.strictEqual(sif.findSmallestInt([78,56,232,12,0]),0,'Should return the smallest int 0');
-    assert.strictEqual(sif.findSmallestInt([1,56,232,12,8]),1,'Should return the smallest int 1');
-  });
-})
+// describe("Smallest Integer Tests", () => {
+//   let sif = new SmallestIntegerFinder();
+//   it("Fixed Tests", () => {
+//     assert.strictEqual(sif.findSmallestInt([78,56,232,12,8]),8,'Should return the smallest int 8');
+//     assert.strictEqual(sif.findSmallestInt([78,56,232,12,18]),12,'Should return the smallest int 12');
+//     assert.strictEqual(sif.findSmallestInt([78,56,232,412,228]),56,'Should return the smallest int 56');
+//     assert.strictEqual(sif.findSmallestInt([78,56,232,12,0]),0,'Should return the smallest int 0');
+//     assert.strictEqual(sif.findSmallestInt([1,56,232,12,8]),1,'Should return the smallest int 1');
+//   });
+// })
+
+// Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+
+// Examples:
+
+// solution('abc', 'bc') // returns true
+// solution('abc', 'd') // returns false
+function solution(str, ending) {
+  return str.endsWith(ending);
+}
+// Test cases
+console.log(solution('abc', 'bc'));  // returns true
+console.log(solution('abc', 'd'));   // returns false
