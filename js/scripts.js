@@ -171,3 +171,30 @@ describe("Basic tests", () => {
     assert.strictEqual(squareDigits(0), 0);
   });
 })
+
+function getCount(str) {
+  const vowels = "aeiou";
+  let count = 0;
+
+  for (let char of str) {
+    if (vowels.includes(char)) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+
+//alrernative soulutions
+function getCount(str) {
+  return (str.match(/[aeiou]/ig)||[]).length;
+}
+
+const {assert} = require("chai");
+
+describe("Vowels Count Tests",function(){
+  it("should return 5 for 'abracadabra'",function(){
+    assert.strictEqual(getCount("abracadabra"), 5) ;
+  });
+});
