@@ -328,3 +328,27 @@ describe('Fixed Tests', () => {
   Test.assertEquals(AmIAfraid("Tuesday", 965), true, 'Should return true');
   Test.assertEquals(AmIAfraid("Friday", 2), true, 'Should return true');
 });
+//Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+
+//Note: a and b are not ordered!
+function sumAll(a, b) {
+  // Find the minimum and maximum values
+  const min = Math.min(a, b);
+  const max = Math.max(a, b);
+
+  // Initialize a variable to store the sum
+  let sum = 0;
+
+  // Loop from the minimum to the maximum value, adding each integer to the sum
+  for (let i = min; i <= max; i++) {
+    sum += i;
+  }
+
+  return sum;
+}
+
+// Examples:
+console.log(sumAll(1, 4)); // Output: 10 (1 + 2 + 3 + 4 = 10)
+console.log(sumAll(4, 1)); // Output: 10 (1 + 2 + 3 + 4 = 10)
+console.log(sumAll(-3, 2)); // Output: -3 (-3 + -2 + -1 + 0 + 1 + 2 = -3)
+console.log(sumAll(5, 5)); // Output: 5 (a and b are equal)
