@@ -409,3 +409,23 @@ describe("removeSmallest", function() {
     }
   });
 });
+//Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+function longest(s1, s2) {
+  //so we set both strings into new sets. this will remove any duplicated characters.
+  const set1 = new Set(s1);
+  const set2 = new Set(s2);
+  //and we will conbine the two sets in to one long variable
+  const combinedSet = new Set([...set1, ...set2]);
+//this will sort the string and join them together into the sorted string variable.
+  const sortedString = [...combinedSet].sort().join('');
+  return sortedString;
+}
+//test
+const Test = require('@codewars/test-compat');
+
+describe("longest",function() {
+it("Basic tests",function() {
+  Test.assertEquals(longest("aretheyhere", "yestheyarehere"), "aehrsty")
+  Test.assertEquals(longest("loopingisfunbutdangerous", "lessdangerousthancoding"), "abcdefghilnoprstu")
+  Test.assertEquals(longest("inmanylanguages", "theresapairoffunctions"), "acefghilmnoprstuy")
+})})
