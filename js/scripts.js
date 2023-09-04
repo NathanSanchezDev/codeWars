@@ -120,7 +120,7 @@ function numberToString(num) {
   return num.toString();
 }
 //test code
-const assert = require('chai').assert;
+//const assert = require('chai').assert;
 describe("Tests", () => {
   it("test", () => {
     assert.strictEqual(numberToString(67), '67');
@@ -379,7 +379,7 @@ function removeSmallest(arr) {
 }
 //test samples
 const chai = require("chai");
-const assert = chai.assert;
+//const assert = chai.assert;
 chai.config.truncateThreshold=0;
 
 describe("removeSmallest", function() {
@@ -429,3 +429,38 @@ it("Basic tests",function() {
   Test.assertEquals(longest("loopingisfunbutdangerous", "lessdangerousthancoding"), "abcdefghilnoprstu")
   Test.assertEquals(longest("inmanylanguages", "theresapairoffunctions"), "acefghilmnoprstuy")
 })})
+
+
+//An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+//Example: (Input --> Output)
+
+//"Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
+//solution: 
+function isIsogram(str) {
+  const lowercaseStr = str.toLowerCase();
+  const charSet = new Set();
+  for (const char of lowercaseStr) {
+    if (charSet.has(char)) {
+      return false;
+    }
+    charSet.add(char);
+  }
+  return true;
+}
+
+//test cases:
+const chai = require("chai");
+const assert = chai.assert;
+chai.config.truncateThreshold=0;
+
+describe("Tests", () => {
+  it("test", () => {
+    assert.strictEqual( isIsogram("Dermatoglyphics"), true );
+    assert.strictEqual( isIsogram("isogram"), true );
+    assert.strictEqual( isIsogram("aba"), false, "same chars may not be adjacent" );
+    assert.strictEqual( isIsogram("moOse"), false, "same chars may not be same case" );
+    assert.strictEqual( isIsogram("isIsogram"), false );
+    assert.strictEqual( isIsogram(""), true, "an empty string is a valid isogram" );
+  });
+});
