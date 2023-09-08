@@ -521,3 +521,30 @@ describe("doubleChar", function() {
     Test.assertEquals(doubleChar("%^&*("), "%%^^&&**((");
   });
 });
+
+
+//soluition:
+function positiveSum(arr) {
+  arr > 0 ? const sum = arr.reduce((a, b) => a + b); : return 
+}
+
+
+//problem :
+//Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+
+//for example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+//solution:
+function sumTwoSmallestNumbers(numbers) {  
+  numbers.sort((a, b) => a - b);
+  const sum = numbers[0] + numbers[1];
+  return sum;
+}
+
+//test cases:
+const array1 = [19, 5, 42, 2, 77];
+const result1 = sumTwoSmallestNumbers(array1);
+console.log(result1); // Output: 7
+
+const array2 = [10, 343445353, 3453445, 3453545353453];
+const result2 = sumTwoSmallestNumbers(array2);
+console.log(result2); // Output: 3453455
