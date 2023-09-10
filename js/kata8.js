@@ -27,3 +27,20 @@ function areYouPlayingBanjo(name) {
     }else{
       return(`${name} does not play banjo`)
   }}
+
+//Description:
+//We need a function that can transform a string into a number. What ways of achieving this do you know?
+//Note: Don't worry, all inputs will be strings, and every string is a perfectly valid representation of an integral number.
+
+//Solution:
+const stringToNumber = (str) => Number(str);
+
+
+//Description:
+//Write a function which converts the input string to uppercase.
+
+//Solution:
+const makeUpperCase = (str) => {
+  const upperCaseStr = str.toUpperCase();
+  return upperCaseStr.length > 0 ? upperCaseStr : '';
+};
