@@ -44,3 +44,17 @@ const makeUpperCase = (str) => {
   const upperCaseStr = str.toUpperCase();
   return upperCaseStr.length > 0 ? upperCaseStr : '';
 };
+/*Convert number to reversed array of digits
+Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+Example(Input => Output):
+35231 => [1,3,2,5,3]
+0 => [0]
+*/
+//Solution:
+function digitize(n) {
+  let strN = n.toString();
+  let arrayE = strN.split('');
+  let arrayRev = arrayE.reverse().map(Number);
+  return arrayRev;
+}
