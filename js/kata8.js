@@ -58,3 +58,47 @@ function digitize(n) {
   let arrayRev = arrayE.reverse().map(Number);
   return arrayRev;
 }
+
+//Write function bmi that calculates body mass index (bmi = weight / height2).
+
+// if bmi <= 18.5 return "Underweight"
+
+// if bmi <= 25.0 return "Normal"
+
+// if bmi <= 30.0 return "Overweight"
+
+// if bmi > 30 return "Obese"
+
+//Solution:
+//this was my first idea to go with
+function bmi(weight, height) {
+  const bmi = weight / height ** 2
+  if (bmi <= 18.5){
+    return('Underweight')
+  }else if(bmi <= 25.0){
+    return ('Normal')
+  }else if(bmi <= 30){
+    return ('Overweight')
+  }else {
+    return ('Obese')
+  }
+  }
+
+  //i optimized the code to be more best practice here:
+  const UNDERWEIGHT_THRESHOLD = 18.5;
+const NORMAL_THRESHOLD = 25.0;
+const OVERWEIGHT_THRESHOLD = 30.0;
+
+function bmi(weight, height) {
+  const bmiValue = weight / (height ** 2);
+
+  if (bmiValue <= UNDERWEIGHT_THRESHOLD) {
+    return 'Underweight';
+  } else if (bmiValue <= NORMAL_THRESHOLD) {
+    return 'Normal';
+  } else if (bmiValue <= OVERWEIGHT_THRESHOLD) {
+    return 'Overweight';
+  } else {
+    return 'Obese';
+  }}
+  
