@@ -107,3 +107,21 @@ function oddOrEven(array) {
   const arraySum = array.reduce((a, b) => a + b, 0);
   return arraySum % 2 === 0 ? "even" : "odd";
 }
+
+/*
+In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+Example
+filter_list([1,2,'a','b']) == [1,2]
+filter_list([1,'a','b',0,15]) == [1,0,15]
+filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+*/
+//solution:
+const filter_list = (l) => {
+  const result = [];
+  for (const element of l) {
+    if (typeof element === 'number' && element >= 0 && Number.isInteger(element)) {
+      result.push(element);
+    }
+  }
+  return result;
+};
