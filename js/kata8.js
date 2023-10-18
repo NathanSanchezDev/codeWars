@@ -248,3 +248,21 @@ const getAge = (inputString) => {
   const age = inputString.split('')[0]
   return parseInt(age)
 }
+
+/*
+Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'.
+Return the resulting string.
+Note: input will never be an empty string
+*/
+//solution:
+function fakeBin(x) {
+  const newArray = x.split('');
+  for (let i = 0; i < newArray.length; i++) {
+    if (parseInt(newArray[i]) < 5) {
+      newArray[i] = '0';
+    } else {
+      newArray[i] = '1';
+    }
+  }
+  return newArray.join('');
+}
