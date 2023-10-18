@@ -271,3 +271,17 @@ function fakeBin(x) {
   return x.split('').map(n => n < 5 ? 0 : 1).join('');
 }
 //this splits the array into an array of numbers and maps the numbers with a turniary conditional and joins the array together into one string.
+
+/*
+Real easy one! 
+Very simple, given an integer or a floating-point number, find its opposite.
+
+Examples:
+
+1: -1
+14: -14
+-34: 34
+*/
+//Solution:
+const opposite = number => {return -number;}
+//What it does is basically a simple integer conversion to either negative or positive.
