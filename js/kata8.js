@@ -266,3 +266,8 @@ function fakeBin(x) {
   }
   return newArray.join('');
 }
+//After refactoring the code it looks like i could simplify this solution with using the map method. 
+function fakeBin(x) {
+  return x.split('').map(n => n < 5 ? 0 : 1).join('');
+}
+//this splits the array into an array of numbers and maps the numbers with a turniary conditional and joins the array together into one string.
