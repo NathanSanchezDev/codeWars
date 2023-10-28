@@ -125,3 +125,14 @@ const filter_list = (l) => {
   }
   return result;
 };
+
+// Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+
+// Examples
+// "www.codewars.com#about" --> "www.codewars.com"
+// "www.codewars.com?page=1" -->"www.codewars.com?page=1"
+//solution: 
+const removeUrlAnchor = (url) => {
+  const parts = url.split('#')
+      return parts[0]
+  }
