@@ -361,3 +361,17 @@ The Database
     }
     return languageDatabase["english"];
   }
+
+/*
+Make a function that returns the value multiplied by 50 and increased by 6. 
+If the value entered is a string it should return "Error".
+*/
+
+  //solution: 
+  const problem = (a) => { 
+    if (typeof a === 'string' || a === "") {
+      return "Error";
+    } else {
+      return 50 * a + 6;
+      }
+    }
